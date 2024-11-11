@@ -1,0 +1,38 @@
+<div class="container">
+    <div class="containerBackground">
+    <div class="alignCenter">SignUp Form</div>
+    <pre></pre>
+    <div>
+    <form #registerform="ngForm" (ngSubmit)="OnSubmit(registerform)">
+      <mat-form-field appearance="outline">
+        <mat-label>UserName</mat-label>
+        <input matInput name="UserName" type="text" ngModel required>
+      </mat-form-field>
+      <mat-error *ngIf="registerform.controls['UserName']?.touched && registerform.controls['UserName']?.errors?.['required']">
+        UserName is missing
+      </mat-error>
+      <pre></pre>
+      <mat-form-field appearance="outline">
+        <mat-label>Email</mat-label>
+        <input matInput name="Email" type="text" ngModel required>
+      </mat-form-field>
+      <mat-error *ngIf="registerform.controls['Email']?.touched && registerform.controls['Email']?.errors?.['required']">
+        Email is missing
+      </mat-error>
+      <pre></pre>
+      <mat-form-field appearance="outline">
+        <mat-label>Password</mat-label>
+        <input matInput name="Password" type="password" ngModel required>
+      </mat-form-field>
+      <mat-error *ngIf="registerform.controls['Password']?.touched && registerform.controls['Password']?.errors?.['required']">
+        Password is missing
+      </mat-error>
+      <pre></pre>
+      <div class="alignCenter">
+        <button mat-raised-button type="submit" color="primary">Register</button>
+      </div>
+      <pre></pre>
+    </form> 
+  </div>
+  </div>
+  </div>

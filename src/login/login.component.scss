@@ -1,0 +1,27 @@
+
+.container{
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+    background-color: #BFD641;
+}
+
+.alignCenter{
+    display: flex;
+    justify-content: center;
+}
+
+.containerBackground{
+    background-color: #CEB345;
+    padding: 30px;
+    border: 1px solid #CEB345
+}
+
+.alert-color{
+    color: red;
+}

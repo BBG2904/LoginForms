@@ -1,0 +1,32 @@
+<div class="container">
+    <div class="containerBackground">
+    <div class="alignCenter">Login Form</div>
+    <pre></pre>
+    <div>
+    <form #userform="ngForm" (ngSubmit)="OnSubmit(userform)">
+      <mat-form-field appearance="outline">
+        <mat-label>UserName</mat-label>
+        <input matInput name="UserName" type="text" ngModel required>
+      </mat-form-field>
+      <mat-error *ngIf="userform.controls['UserName']?.touched && userform.controls['UserName']?.errors?.['required']">
+        UserName is missing
+      </mat-error>
+      <pre></pre>
+      <mat-form-field appearance="outline">
+        <mat-label>Password</mat-label>
+        <input matInput name="Password" type="password" ngModel required>
+      </mat-form-field>
+      <mat-error *ngIf="userform.controls['Password']?.touched && userform.controls['Password']?.errors?.['required']">
+        Password is missing
+      </mat-error>
+      <pre></pre>
+      <div class="alignCenter">
+        <button mat-raised-button type="submit" color="primary">Submit</button>
+      </div>
+      <pre></pre>
+      <span>If not regitered please </span><a [routerLink]="['/SignUp']">SignUp</a>
+      <div class="alert-color">{{message}}</div>
+    </form> 
+  </div>
+  </div>
+  </div>
